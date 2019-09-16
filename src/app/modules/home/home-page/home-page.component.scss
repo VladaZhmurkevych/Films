@@ -1,0 +1,22 @@
+.posts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fas {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.fa-chevron-left {
+  margin-right: 80px;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 50px;
+  transform: translateX(-50%);
+  left: 50%;
+
+}

@@ -1,5 +1,5 @@
-import {MainState} from "./reducers/main.reducer";
+import {MainState} from './reducers/main.reducer';
 
 export interface State {
-  main: MainState
+  main: MainState;
 }

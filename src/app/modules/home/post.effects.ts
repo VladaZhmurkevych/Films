@@ -15,25 +15,21 @@ export class PostEffects {
     ofType(loadPosts),
     switchMap(() => this.postService.$getPosts()
       .pipe(
-        map((posts: Post[]) => {
-          console.log(posts);
-          return setPosts({ posts });
-        }),
+        map((posts: Post[]) => setPosts({ posts })),
         catchError(() => EMPTY)
       )
     ),
   );
 
+
   @Effect() $loadUsers = this.actions$.pipe(
     ofType(loadUsers),
     switchMap(() => this.postService.$getUsers()
       .pipe(
-        map((users: User[]) => {
-          return setUsers({ users });
-        }),
+        map((users: User[]) => setUsers({ users })),
         catchError(() => EMPTY)
       )
-    )
+    ),
   );
 
   constructor(private actions$: Actions,

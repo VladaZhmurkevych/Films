@@ -10,11 +10,14 @@ import {PostService} from "./post.service";
 import {PostApiService} from "./post-api.service";
 import {HttpClientModule} from "@angular/common/http";
 import { HomePageComponent } from './home-page/home-page.component';
+import { UserComponent } from './user/user.component';
+import { BigPostComponent } from './big-post/big-post.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
 
 
 
 @NgModule({
-  declarations: [PostComponent, HomePageComponent],
+  declarations: [PostComponent, HomePageComponent, UserComponent, BigPostComponent, UserPostsComponent],
   exports: [
     PostComponent
   ],

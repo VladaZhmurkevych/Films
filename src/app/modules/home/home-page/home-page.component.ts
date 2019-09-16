@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Post} from '../../../entity/post';
 import {Store} from '@ngrx/store';
 import {State} from '../../../store/State';
-import {loadPosts} from '../../../store/actions/main.actions';
+import {loadPosts, loadUsers} from '../../../store/actions/main.actions';
 import {User} from "../../../entity/User";
 
 @Component({
@@ -21,7 +21,6 @@ export class HomePageComponent implements OnInit {
     this.store.select(state => state.main.posts)
       .subscribe((posts: Post[]) => {
         this.posts = posts;
-        console.log(posts);
         console.log(Math.ceil(this.posts.length / 8));
       });
 
@@ -31,6 +30,11 @@ export class HomePageComponent implements OnInit {
       });
 
     this.store.dispatch(loadPosts());
+    this.store.dispatch(loadUsers());
+  }
+
+  findUser(post: Post) {
+    return this.users.find(user => user.id === post.userId);
   }
 
   nextPage() {

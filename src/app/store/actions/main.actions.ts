@@ -9,7 +9,7 @@ export const setPosts = createAction(
 
 
 export const setUsers = createAction(
-  '[MAIN] Set posts',
+  '[MAIN] Set users',
   props<{ users: User[] }>()
 );
 

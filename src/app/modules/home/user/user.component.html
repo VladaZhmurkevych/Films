@@ -1,0 +1,26 @@
+<div class="container" *ngIf="user">
+  <fieldset class="block">
+    <legend class="captain">Main info</legend>
+    <p><span class="key">Name:</span> {{user.name}}</p>
+    <p><span class="key">Username:</span> {{user.username}}</p>
+    <p><span class="key">Email:</span> {{user.email}}</p>
+    <p><span class="key">Phone:</span> {{user.phone}}</p>
+    <p><span class="key">Website:</span> http://www.{{user.website}}</p>
+  </fieldset>
+
+  <fieldset class="block">
+    <legend class="captain">Address</legend>
+    <p><span class="key">Street:</span> {{user.address.street}}</p>
+    <p><span class="key">Suite:</span> {{user.address.suite}}</p>
+    <p><span class="key">City:</span> {{user.address.city}}</p>
+    <p><span class="key">Zipcode:</span> {{user.address.zipcode}}</p>
+    <p><span class="key">Geo:</span> {{user.address.geo.lat }} {{user.address.geo.lng}}</p>
+  </fieldset>
+
+  <fieldset class="block">
+    <legend class="captain">Company</legend>
+    <p><span class="key">Name:</span> {{user.company.name}}</p>
+    <p><span class="key">Catch phrase:</span> {{user.company.catchPhrase}}</p>
+    <p><span class="key">Bs:</span> {{user.company.bs}}</p>
+  </fieldset>
+</div>

@@ -1,5 +1,6 @@
-<div class="container">
+<div class="container" *ngIf="user && post">
   <p class="title">{{post.title}}</p>
   <p class="text">{{post.body}}</p>
+  <a [routerLink]="['/users', user.id]" class="name">{{user.name}}</a>
 </div>
 
